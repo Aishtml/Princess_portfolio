@@ -1,0 +1,150 @@
+:root {
+    /* color */
+    --white: hsl(0, 0%, 100%);
+    --black: hsl(0, 0%, 0%);
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    background-color: var(--white);
+    font-family:'Trebuchet MS', sans-serif;
+}
+
+header,
+main,
+footer {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 2em;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    text-wrap: balance;
+    margin-bottom: 3rem;
+}
+
+p {
+    font-weight: 600;
+    font-size: 1.3rem;
+    line-height: 2rem;
+    padding-bottom: 3rem;
+}
+
+footer p {
+    margin-top: 3rem;
+    text-align: center;
+}
+
+.logo {
+    width: 60px;
+}
+
+.nav--section {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav--section nav {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+
+.nav--section nav a {
+    text-decoration: none;
+    color: var(--black);
+    font-size: 1.5rem;
+    font-weight: 500;
+    padding-left: 1.2em;
+}
+
+.img {
+    width: 100%;
+    margin: 3em 0;
+    border-radius: 2em 2em 0 0;
+}
+
+.hire,
+.contact {
+    display: block;
+    background-color: var(--black);
+    text-decoration: none;
+    color: var(--white);
+    padding: 1rem;
+    margin-bottom: 1rem;
+    font-weight: 500;
+    font-size: 1.5rem;
+    margin-right: 1rem;
+    border-radius: 0.5em;
+    transition: all 0.5s  ease-in;
+    text-align: center;
+}
+
+.hire {
+    background-color: var(--white);
+    color: black;
+    border: 2.5px solid;
+}
+
+.nav--section nav a:hover {
+    color: navy;
+}
+
+.hire:hover {
+    background-color: var(--black);
+    color: var(--white);
+}
+.contact:hover {
+    background-color: var(--white);
+    color: var(--black);
+    border: 2px solid;
+}
+
+@media(min-width: 700px) {
+    .hire,
+    .contact {
+        width: 50%;
+    }
+}
+
+@media(min-width: 65em) {
+    h1 {
+        font-size: 4rem;
+    }
+    secton:has(.img) {
+        width: 10%;
+    }
+
+    .img {
+        border: 5px solid;
+        border-radius: 25% 75% 57% 43% / 44% 33% 67% 56%;
+    }
+
+    .text {
+        width: 80%;
+    }
+    .containment {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        flex-direction: row-reverse;
+    }
+
+    .hire,
+    .contact {
+        display: inline;
+    }
+}
